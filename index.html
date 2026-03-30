@@ -18,7 +18,7 @@
             margin: 0; display: flex; flex-wrap: wrap;
         }
         
-        /* SIDEBAR WITH BUTTONS */
+        /* SIDEBAR */
         .sidebar {
             background-color: var(--sidebar); width: 320px; min-height: 100vh;
             padding: 40px 20px; text-align: center; border-right: 2px solid var(--pink);
@@ -60,7 +60,7 @@
     <p>PhD Candidate | University of Iowa</p>
     
     <div class="nav-menu">
-         <a href="#Home" class="nav-btn">Home</a>
+        <a href="#home" class="nav-btn">Home</a>
         <a href="#research" class="nav-btn">Research</a>
         <a href="#teaching" class="nav-btn">Teaching</a>
         <a href="#contact" class="nav-btn">Contact</a>
@@ -71,18 +71,27 @@
 </div>
 
 <div class="main">
-    <section id="research">
-        <h2>Research Interests</h2>
+    <section id="home">
+        <h2>About Me</h2>
+        <p>I am a <strong>PhD Candidate in Mathematics</strong> at the University of Iowa, working under the supervision of <strong>Prof. Isabel Darcy</strong>[cite: 2]. My academic journey includes an MS in Mathematics from both the University of Iowa and the University of Tehran[cite: 2].</p>
+        
+        <p>I am passionate about bridging the gap between theoretical mathematics and practical data insights. Beyond research, I am actively involved in the academic community, serving as the Social Media Manager for the <strong>Association for Women in Mathematics (AWM)</strong> and as an International Liaison Officer for the Math Graduate Board.</p>
+        
+        <h3>Core Research Interests</h3>
         <div style="margin-bottom: 20px;">
             <span class="interest-tag">Topological Data Analysis (TDA)</span>
             <span class="interest-tag">Visualization Methods</span>
             <span class="interest-tag">Persistent Homology</span>
         </div>
+    </section>
+
+    <section id="research">
+        <h2>Research & Experience</h2>
         <p>I focus on leveraging the <strong>Mapper algorithm</strong> and topological tools to uncover patterns in high-dimensional data[cite: 6, 8]. My current work involves:</p>
         <ul>
-            <li>Filtration of simplicial complexes and application to mapper graphs[cite: 27].</li>
-            <li>Multi-scale visualization of mapper graphs via filtration[cite: 28].</li>
-            <li>Applications of persistent homology in Python for complex systems[cite: 7, 8].</li>
+            <li><strong>Mapper Graphs:</strong> Developing multi-scale visualization and filtration techniques for complex systems[cite: 27, 28].</li>
+            <li><strong>Computational Tools:</strong> Utilizing Python and TDA libraries to investigate persistent homology[cite: 7].</li>
+            <li><strong>Applied Topology:</strong> Deriving insights from complex systems through topological approaches[cite: 8].</li>
         </ul>
     </section>
 
@@ -95,27 +104,15 @@
         </div>
         <div class="card">
             <strong>Primary Instructor</strong><br>
-            Engineering Matrix Algebra (Spring 2026), College Algebra (Fall 2025), Elementary Functions (Spring 2025)[cite: 15].
+            Engineering Matrix Algebra (Spring 2026), College Algebra (Fall 2025), and Elementary Functions (Spring 2025)[cite: 15].
         </div>
         <p>Recognized as one of the 10 most outstanding Math Lab tutors by students in Spring 2023[cite: 19].</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="card">
-            <strong>Topological View on Motion Planning for Robotics</strong><br>
-            Researching topological approaches for robotic movement[cite: 9].
-        </div>
-        <div class="card">
-            <strong>Image Reconstruction by SVD</strong><br>
-            Using Singular Value Decomposition for high-fidelity image reconstruction[cite: 10].
-        </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <div class="card">
-            <p><strong>Email:</strong> <a href="mailto:fatemeh-shanehsazan@uiowa.edu" style="color: var(--pink);">fatemeh-shanehsazan@uiowa.edu</a> [cite: 1]</p>
+            <p><strong>Email:</strong> <a href="mailto:fatemeh-shanehsazan@uiowa.edu" style="color: var(--pink);">fatemeh-shanehsazan@uiowa.edu</a></p>
             <p><strong>Phone:</strong> +1(319)-383-9514 [cite: 1]</p>
             <p><strong>Office:</strong> Department of Mathematics, University of Iowa [cite: 32]</p>
         </div>

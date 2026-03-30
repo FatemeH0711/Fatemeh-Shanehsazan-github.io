@@ -7,28 +7,31 @@
         body { 
             background-color: #0b0d17; 
             color: #e0e0e0; 
-            font-family: 'Segoe UI', sans-serif; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
             line-height: 1.6;
         }
         .hero {
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
                         url('https://www.transparenttextures.com/patterns/stardust.png');
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-bottom: 2px solid #1a2a6c;
         }
         h1 { color: #4facfe; margin: 0; font-size: 2.5em; }
-        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
-        h2 { border-left: 4px solid #00f2fe; padding-left: 15px; color: #00f2fe; }
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; }
+        h2 { border-left: 4px solid #00f2fe; padding-left: 15px; color: #00f2fe; margin-top: 40px; }
+        h3 { color: #4facfe; margin-bottom: 5px; }
+        .date { color: #888; font-style: italic; font-size: 0.9em; }
         a { color: #4facfe; text-decoration: none; font-weight: bold; }
-        .project-card { 
+        .card { 
             background: #16213e; 
-            padding: 20px; 
+            padding: 15px 20px; 
             border-radius: 8px; 
-            margin-bottom: 20px; 
+            margin-bottom: 15px; 
             border: 1px solid #0f3460;
         }
+        ul { padding-left: 20px; }
     </style>
 </head>
 <body>
@@ -36,20 +39,50 @@
 <div class="hero">
     <h1>Fatemeh Shanehsazan</h1>
     <p>PhD Student in Mathematics | University of Iowa</p>
+    <p>Email: fatemeh-shanehsazan@uiowa.edu</p>
 </div>
 
 <div class="container">
-    <h2>Research Interests</h2>
-    <p>I am a PhD student at the University of Iowa specializing in <strong>Topological Data Analysis (TDA)</strong>. My research focuses on leveraging the Mapper algorithm and persistent homology for high-dimensional data.</p>
-
-    <h2>Projects</h2>
-    <div class="project-card">
-        <h3><a href="https://github.com/FatemeH0711/kepler-mapper">Kepler Mapper</a></h3>
-        <p>A Python implementation of the Mapper algorithm for data visualization.</p>
+    
+    <h2>Education</h2>
+    <div class="card">
+        <h3>PhD in Mathematics</h3>
+        <p>University of Iowa | Advisor: Prof. Isabel Darcy <span class="date">(2023 - Present)</span></p>
+    </div>
+    <div class="card">
+        <h3>MS in Mathematics</h3>
+        <p>University of Tehran, Iran <span class="date">(2018 - 2020)</span></p>
     </div>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:fatemehshanehsazan1993@gmail.com">fatemehshanehsazan1993@gmail.com</a></p>
+    <h2>Research & Experience</h2>
+    <p>My research focuses on <strong>Topological Data Analysis (TDA)</strong>, using persistent homology and algorithms to uncover patterns in high-dimensional datasets.</p>
+    <ul>
+        <li>Investigation of persistent homology applications using Python and TDA libraries.</li>
+        <li>Development of topological approaches to derive insights from complex systems.</li>
+        <li>Research on "Multi-scale visualization of mapper graphs via filtration."</li>
+    </ul>
+
+    <h2>Teaching</h2>
+    <div class="card">
+        <h3>Primary Instructor & Mentor</h3>
+        <p>University of Iowa <span class="date">(2023 - Present)</span></p>
+        <ul>
+            <li>TA Mentor for first-year teaching assistants (Spring 2026)</li>
+            <li>Instructor: Engineering Matrix Algebra, College Algebra, Elementary Functions</li>
+            <li>Recognized as one of the 10 most outstanding Math Lab tutors (Spring 2023)</li>
+        </ul>
+    </div>
+
+    <h2>Skills</h2>
+    <p><strong>Software:</strong> Python (SciPy, Pandas, Scikit-learn, Torch), MATLAB, R Studio, Microsoft Office</p>
+    <p><strong>General:</strong> Data Analysis, Machine Learning, Mathematical Modeling, Data Visualization, Leadership</p>
+
+    <h2>Leadership & Service</h2>
+    <ul>
+        <li>Executive Board Social Media Manager, Association for Women in Mathematics (AWM)</li>
+        <li>International Liaison Officer, Math Graduate Board (2024-2025)</li>
+    </ul>
+
 </div>
 
 </body>

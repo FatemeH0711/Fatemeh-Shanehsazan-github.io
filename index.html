@@ -11,6 +11,7 @@
             --pink: #ff79c6;
             --purple: #bd93f9;
         }
+        html { scroll-behavior: smooth; } /* Makes clicking buttons slide smoothly */
         body { 
             background-color: var(--bg); color: var(--text); 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -19,24 +20,29 @@
         .sidebar {
             background-color: var(--sidebar); width: 320px; min-height: 100vh;
             padding: 40px 20px; text-align: center; border-right: 2px solid var(--pink);
+            position: fixed; /* Keeps sidebar still while you scroll */
         }
-        
-        /* IMAGE STYLING UPDATED TO MOVE HEAD DOWN */
         .profile-img {
-            width: 180px; height: 180px; border-radius: 50%;
+            width: 170px; height: 170px; border-radius: 50%;
             border: 4px solid var(--pink); object-fit: cover; 
-            margin-top: 30px; margin-bottom: 10px; /* Moves entire circle down */
-            object-position: center 0.1px; /* Moves head DOWN inside the circle */
+            margin-top: 0.1px; object-position: center 25px; /* Centers your head */
             box-shadow: 0 0 20px rgba(255, 121, 198, 0.4);
         }
+        /* NEW BUTTON STYLING */
+        .nav-menu { margin-top: 30px; text-align: left; padding: 0 20px; }
+        .nav-btn {
+            display: block; width: 100%; padding: 12px; margin-bottom: 10px;
+            background: transparent; border: 1px solid var(--purple);
+            color: var(--text); text-align: center; text-decoration: none;
+            border-radius: 25px; font-weight: bold; transition: 0.3s;
+        }
+        .nav-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--bg); }
 
-        .main { flex: 1; padding: 40px; max-width: 850px; }
-        h1 { color: var(--pink); margin: 10px 0; font-size: 2.2em; }
-        h2 { color: var(--purple); border-bottom: 1px solid var(--purple); padding-bottom: 10px; margin-top: 40px; }
+        .main { flex: 1; padding: 40px; margin-left: 360px; max-width: 800px; }
+        h1 { color: var(--pink); margin: 10px 0; font-size: 2em; }
+        h2 { color: var(--purple); border-bottom: 1px solid var(--purple); padding-bottom: 10px; margin-top: 60px; }
         .card { background: #24143d; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #3d2563; }
         .date { color: var(--pink); font-weight: bold; float: right; font-size: 0.9em; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -44,76 +50,75 @@
 <div class="sidebar">
     <img src="fatemeh.jpeg" alt="Fatemeh Shanehsazan" class="profile-img">
     <h1>Fatemeh Shanehsazan</h1>
-    <p>PhD Candidate in Mathematics<br>University of Iowa</p>
-    <hr style="border: 0; border-top: 1px solid var(--purple); margin: 25px 0;">
-    <p> fatemeh-shanehsazan@uiowa.edu</p>
-   
+    <p>PhD Candidate | University of Iowa [cite: 2]</p>
     
-    <p style="margin-top: 30px;">
-        <a href="https://github.com/FatemeH0711" style="color: var(--pink); text-decoration: none; font-weight: bold;">
-           <img src="https://simpleicons.org/icons/github.svg" alt="GitHub" width="24" style="filter: invert(67%) sepia(87%) saturate(1478%) hue-rotate(305deg) brightness(101%) contrast(106%); vertical-align: middle;">
-           FatemeH0711
-        </a>
-    </p>
+    <div class="nav-menu">
+        <a href="#education" class="nav-btn">Education</a>
+        <a href="#training" class="nav-btn">Training & Internships</a>
+        <a href="#research" class="nav-btn">Research</a>
+        <a href="#teaching" class="nav-btn">Teaching</a>
+    </div>
+
+    <hr style="border: 0; border-top: 1px solid var(--purple); margin: 25px 0;">
+    <p style="font-size: 0.85em;">📧 fatemeh-shanehsazan@uiowa.edu [cite: 1]</p>
 </div>
 
 <div class="main">
-    <h2>Education</h2>
-    <div class="card">
-        <span class="date">2023 - Present</span>
-        <strong>PhD Candidate in Mathematics</strong><br>
-        University of Iowa | Advisor: Prof. Isabel Darcy
-    </div>
-    <div class="card">
-        <strong>MS in Mathematics</strong><br>
-        University of Iowa
-    </div>
-    <div class="card">
-        <span class="date">2018 - 2020</span>
-        <strong>MS in Mathematics</strong><br>
-        University of Tehran, Iran
-    </div>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+            <span class="date">2023 - Present [cite: 2]</span>
+            <strong>PhD Candidate in Mathematics</strong><br>
+            University of Iowa | Advisor: Prof. Isabel Darcy [cite: 2]
+        </div>
+        <div class="card">
+            <strong>MS in Mathematics</strong><br>
+            University of Iowa
+        </div>
+        <div class="card">
+            <span class="date">2018 - 2020 [cite: 2]</span>
+            <strong>MS in Mathematics</strong><br>
+            University of Tehran, Iran [cite: 2]
+        </div>
+    </section>
 
-    <h2>Trainings & Internships</h2>
-    <div class="card">
-        <span class="date">Oct 2024 - Feb 2025</span>
-        <strong>INMAS Training Program | Internship</strong><br>
-        Deep Learning, Statistical Modeling, and hands-on Python projects.
-    </div>
-    <div class="card">
-        <span class="date">Summer 2025</span>
-        <strong>Intern | Smart Heat Corporation</strong><br>
-        Mathematical modeling and data analysis.
-    </div>
-    <div class="card">
-        <span class="date">Issued Mar 2026</span>
-        <strong>CIRTL Associate Level Certificate</strong><br>
-        University of Iowa | Integration of Research, Teaching and Learning.
-    </div>
+    <section id="training">
+        <h2>Trainings & Internships</h2>
+        <div class="card">
+            <span class="date">Oct 2024 - Feb 2025</span>
+            <strong>INMAS Training Program | Internship</strong><br>
+            Experience in Python, Machine Learning, and Deep Learning[cite: 28].
+        </div>
+        <div class="card">
+            <span class="date">Issued Mar 2026</span>
+            <strong>CIRTL Associate Level Certificate</strong><br>
+            University of Iowa[cite: 21].
+        </div>
+    </section>
 
-    <h2>Research & Experience</h2>
-    <p>Specializing in <strong>Topological Data Analysis (TDA)</strong>.</p>
-    <ul>
-        <li>Visualization of mapper graphs via filtration.</li>
-        <li>Persistent homology applications using Python.</li>
-        <li>Deriving insights from complex systems through topological approaches.</li>
-    </ul>
+    <section id="research">
+        <h2>Research</h2>
+        <p>Specializing in <strong>Topological Data Analysis (TDA)</strong>[cite: 2].</p>
+        <ul>
+            <li>Visualization of mapper graphs via filtration[cite: 27, 28].</li>
+            <li>Persistent homology applications using Python[cite: 7].</li>
+        </ul>
+    </section>
 
-    <h2>Teaching Mentor & Instructor</h2>
-    <div class="card">
-        <span class="date">Spring 2026</span>
-        <strong>Teaching Assistant Mentor</strong><br>
-        University of Iowa | Mentoring first-year teaching assistants.
-    </div>
-    <div class="card">
-        <strong>Primary Instructor</strong><br>
-        Engineering Matrix Algebra (Spring 2026), College Algebra (Fall 2025), Elementary Functions (Spring 2025).
-    </div>
-
-    <h2>Technical Skills</h2>
-    <p><strong>Software:</strong> Python (SciPy, matplotlib, Pandas, Scikit-learn, Torch), MATLAB, R Studio.</p>
-    <p><strong>Expertise:</strong> Data Analysis, Machine Learning, Deep Learning, Mathematical Modeling.</p>
+    <section id="teaching">
+        <h2>Teaching</h2>
+        <div class="card">
+            <span class="date">Spring 2026 [cite: 14]</span>
+            <strong>Teaching Assistant Mentor</strong><br>
+            Mentoring first-year teaching assistants[cite: 14].
+        </div>
+        <div class="card">
+            <strong>Primary Instructor [cite: 15]</strong><br>
+            Engineering Matrix Algebra, College Algebra, Elementary Functions[cite: 15].
+        </div>
+    </section>
 </div>
 
 </body>
 </html>
+

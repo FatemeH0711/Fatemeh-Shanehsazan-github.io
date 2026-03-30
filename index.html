@@ -11,37 +11,44 @@
             --pink: #ff79c6;
             --purple: #bd93f9;
         }
-        html { scroll-behavior: smooth; } /* Makes clicking buttons slide smoothly */
+        html { scroll-behavior: smooth; }
         body { 
             background-color: var(--bg); color: var(--text); 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; display: flex; flex-wrap: wrap;
         }
+        
+        /* SIDEBAR WITH BUTTONS */
         .sidebar {
             background-color: var(--sidebar); width: 320px; min-height: 100vh;
             padding: 40px 20px; text-align: center; border-right: 2px solid var(--pink);
-            position: fixed; /* Keeps sidebar still while you scroll */
+            position: fixed;
         }
         .profile-img {
             width: 170px; height: 170px; border-radius: 50%;
             border: 4px solid var(--pink); object-fit: cover; 
-            margin-top: 0.1px; object-position: center 25px; /* Centers your head */
+            margin-top: 0.1px; object-position: center 25px;
             box-shadow: 0 0 20px rgba(255, 121, 198, 0.4);
         }
-        /* NEW BUTTON STYLING */
         .nav-menu { margin-top: 30px; text-align: left; padding: 0 20px; }
         .nav-btn {
-            display: block; width: 100%; padding: 12px; margin-bottom: 10px;
-            background: transparent; border: 1px solid var(--purple);
+            display: block; width: 100%; padding: 12px; margin-bottom: 12px;
+            background: transparent; border: 1.5px solid var(--purple);
             color: var(--text); text-align: center; text-decoration: none;
-            border-radius: 25px; font-weight: bold; transition: 0.3s;
+            border-radius: 30px; font-weight: bold; transition: 0.3s;
+            cursor: pointer;
         }
         .nav-btn:hover { background: var(--pink); border-color: var(--pink); color: var(--bg); }
 
+        /* MAIN CONTENT */
         .main { flex: 1; padding: 40px; margin-left: 360px; max-width: 800px; }
         h1 { color: var(--pink); margin: 10px 0; font-size: 2em; }
         h2 { color: var(--purple); border-bottom: 1px solid var(--purple); padding-bottom: 10px; margin-top: 60px; }
         .card { background: #24143d; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #3d2563; }
+        .interest-tag {
+            display: inline-block; background: var(--sidebar); border: 1px solid var(--pink);
+            color: var(--pink); padding: 5px 15px; border-radius: 20px; margin: 5px; font-weight: bold;
+        }
         .date { color: var(--pink); font-weight: bold; float: right; font-size: 0.9em; }
     </style>
 </head>
@@ -50,75 +57,70 @@
 <div class="sidebar">
     <img src="fatemeh.jpeg" alt="Fatemeh Shanehsazan" class="profile-img">
     <h1>Fatemeh Shanehsazan</h1>
-    <p>PhD Candidate | University of Iowa [cite: 2]</p>
+    <p>PhD Candidate | University of Iowa</p>
     
     <div class="nav-menu">
-        <a href="#education" class="nav-btn">Education</a>
-        <a href="#training" class="nav-btn">Training & Internships</a>
         <a href="#research" class="nav-btn">Research</a>
         <a href="#teaching" class="nav-btn">Teaching</a>
+        <a href="#projects" class="nav-btn">Projects</a>
+        <a href="#contact" class="nav-btn">Contact</a>
     </div>
 
     <hr style="border: 0; border-top: 1px solid var(--purple); margin: 25px 0;">
-    <p style="font-size: 0.85em;">📧 fatemeh-shanehsazan@uiowa.edu [cite: 1]</p>
+    <p style="font-size: 0.85em;">Mathematics Department</p>
 </div>
 
 <div class="main">
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-            <span class="date">2023 - Present [cite: 2]</span>
-            <strong>PhD Candidate in Mathematics</strong><br>
-            University of Iowa | Advisor: Prof. Isabel Darcy [cite: 2]
-        </div>
-        <div class="card">
-            <strong>MS in Mathematics</strong><br>
-            University of Iowa
-        </div>
-        <div class="card">
-            <span class="date">2018 - 2020 [cite: 2]</span>
-            <strong>MS in Mathematics</strong><br>
-            University of Tehran, Iran [cite: 2]
-        </div>
-    </section>
-
-    <section id="training">
-        <h2>Trainings & Internships</h2>
-        <div class="card">
-            <span class="date">Oct 2024 - Feb 2025</span>
-            <strong>INMAS Training Program | Internship</strong><br>
-            Experience in Python, Machine Learning, and Deep Learning[cite: 28].
-        </div>
-        <div class="card">
-            <span class="date">Issued Mar 2026</span>
-            <strong>CIRTL Associate Level Certificate</strong><br>
-            University of Iowa[cite: 21].
-        </div>
-    </section>
-
     <section id="research">
-        <h2>Research</h2>
-        <p>Specializing in <strong>Topological Data Analysis (TDA)</strong>[cite: 2].</p>
+        <h2>Research Interests</h2>
+        <div style="margin-bottom: 20px;">
+            <span class="interest-tag">Topological Data Analysis (TDA)</span>
+            <span class="interest-tag">Visualization Methods</span>
+            <span class="interest-tag">Persistent Homology</span>
+        </div>
+        <p>I focus on leveraging the <strong>Mapper algorithm</strong> and topological tools to uncover patterns in high-dimensional data[cite: 6, 8]. My current work involves:</p>
         <ul>
-            <li>Visualization of mapper graphs via filtration[cite: 27, 28].</li>
-            <li>Persistent homology applications using Python[cite: 7].</li>
+            <li>Filtration of simplicial complexes and application to mapper graphs[cite: 27].</li>
+            <li>Multi-scale visualization of mapper graphs via filtration[cite: 28].</li>
+            <li>Applications of persistent homology in Python for complex systems[cite: 7, 8].</li>
         </ul>
     </section>
 
     <section id="teaching">
         <h2>Teaching</h2>
         <div class="card">
-            <span class="date">Spring 2026 [cite: 14]</span>
+            <span class="date">Spring 2026</span>
             <strong>Teaching Assistant Mentor</strong><br>
-            Mentoring first-year teaching assistants[cite: 14].
+            University of Iowa | Mentoring first-year teaching assistants[cite: 11, 14].
         </div>
         <div class="card">
-            <strong>Primary Instructor [cite: 15]</strong><br>
-            Engineering Matrix Algebra, College Algebra, Elementary Functions[cite: 15].
+            <strong>Primary Instructor</strong><br>
+            Engineering Matrix Algebra (Spring 2026), College Algebra (Fall 2025), Elementary Functions (Spring 2025)[cite: 15].
+        </div>
+        <p>Recognized as one of the 10 most outstanding Math Lab tutors by students in Spring 2023[cite: 19].</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <strong>Topological View on Motion Planning for Robotics</strong><br>
+            Researching topological approaches for robotic movement[cite: 9].
+        </div>
+        <div class="card">
+            <strong>Image Reconstruction by SVD</strong><br>
+            Using Singular Value Decomposition for high-fidelity image reconstruction[cite: 10].
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p><strong>Email:</strong> <a href="mailto:fatemeh-shanehsazan@uiowa.edu" style="color: var(--pink);">fatemeh-shanehsazan@uiowa.edu</a> [cite: 1]</p>
+            <p><strong>Phone:</strong> +1(319)-383-9514 [cite: 1]</p>
+            <p><strong>Office:</strong> Department of Mathematics, University of Iowa [cite: 32]</p>
         </div>
     </section>
 </div>
 
 </body>
 </html>
-

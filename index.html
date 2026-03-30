@@ -13,24 +13,25 @@
         }
         body { 
             background-color: var(--bg); color: var(--text); 
-            font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; display: flex; flex-wrap: wrap;
         }
         .sidebar {
             background-color: var(--sidebar); width: 320px; min-height: 100vh;
             padding: 40px 20px; text-align: center; border-right: 2px solid var(--pink);
-            position: sticky; top: 0;
         }
         .profile-img {
-            width: 160px; height: 160px; border-radius: 50%;
-            border: 3px solid var(--pink); object-fit: cover; margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(255, 121, 198, 0.3);
+            width: 180px; height: 180px; border-radius: 50%;
+            border: 4px solid var(--pink); object-fit: cover; margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 121, 198, 0.4);
         }
-        .main { flex: 1; padding: 60px; max-width: 850px; }
+        .main { flex: 1; padding: 40px; max-width: 850px; }
         h1 { color: var(--pink); margin: 10px 0; font-size: 2.2em; }
         h2 { color: var(--purple); border-bottom: 1px solid var(--purple); padding-bottom: 10px; margin-top: 40px; }
-        .card { background: #24143d; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #3d2563; }
-        .date { color: var(--pink); font-weight: bold; float: right; }
-        a { color: var(--pink); text-decoration: none; }
+        .card { background: #24143d; padding: 20px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #3d2563; }
+        .date { color: var(--pink); font-weight: bold; float: right; font-size: 0.9em; }
+        a { color: var(--pink); text-decoration: none; font-weight: bold; }
+        ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
     </style>
 </head>
@@ -39,11 +40,10 @@
 <div class="sidebar">
     <img src="fatemeh.jpeg" alt="Fatemeh Shanehsazan" class="profile-img">
     <h1>Fatemeh Shanehsazan</h1>
-    <p>PhD Candidate in Mathematics [cite: 2]<br>University of Iowa [cite: 2]</p>
-    <p style="font-size: 0.9em; margin-top: 30px;">
-         fatemeh-shanehsazan@uiowa.edu [cite: 1]<br>
-        
-    </p>
+    <p>PhD Candidate in Mathematics<br>University of Iowa</p>
+    <hr style="border: 0; border-top: 1px solid var(--purple); margin: 25px 0;">
+    <p>📧 fatemeh-shanehsazan@uiowa.edu</p>
+    <p>📱 +1(319)-383-9514</p>
 </div>
 
 <div class="main">
@@ -51,41 +51,41 @@
     <div class="card">
         <span class="date">2023 - Present</span>
         <strong>PhD Candidate in Mathematics</strong><br>
-        University of Iowa | Advisor: Prof. Isabel Darcy [cite: 2]
+        University of Iowa | Advisor: Prof. Isabel Darcy
     </div>
     <div class="card">
+        <span class="date">2023 - 2025</span>
         <strong>MS in Mathematics</strong><br>
-        University of Iowa [cite: 2]
-    
+        University of Iowa
+    </div>
     <div class="card">
         <span class="date">2018 - 2020</span>
         <strong>MS in Mathematics</strong><br>
-        University of Tehran, Iran [cite: 2, 13]
+        University of Tehran, Iran
     </div>
 
     <h2>Research & Experience</h2>
-    <p>Specializing in **Topological Data Analysis (TDA)**[cite: 2].</p>
+    <p>Specializing in <strong>Topological Data Analysis (TDA)</strong>.</p>
     <ul>
-        <li>Visualization of mapper graphs via filtration[cite: 27, 28].</li>
-        <li>Persistent homology applications using Python[cite: 7].</li>
-        <li>Deriving insights from complex systems through topological approaches[cite: 8].</li>
+        <li>Visualization of mapper graphs via filtration.</li>
+        <li>Persistent homology applications using Python.</li>
+        <li>Deriving insights from complex systems through topological approaches.</li>
     </ul>
 
-    <h2>Teaching Mentor & Instructor</h2>
+    <h2>Teaching & Mentorship</h2>
     <div class="card">
         <span class="date">Spring 2026</span>
         <strong>Teaching Assistant Mentor</strong><br>
-        Mentoring first-year teaching assistants[cite: 14].
+        University of Iowa | Mentoring first-year teaching assistants.
     </div>
     <div class="card">
-        <span class="date">2025 - 2026</span>
         <strong>Primary Instructor</strong><br>
-        Engineering Matrix Algebra, College Algebra, and Elementary Functions[cite: 15].
+        Engineering Matrix Algebra (Spring 2026), College Algebra (Fall 2025), Elementary Functions (Spring 2025).
     </div>
 
     <h2>Technical Skills</h2>
-    <p><strong>Software:</strong> Python (SciPy, Pandas, Scikit-learn, Torch), MATLAB, R Studio[cite: 29].</p>
-    <p><strong>General:</strong> Data Analysis, Machine Learning, Mathematical Modeling[cite: 30].</p>
+    <p><strong>Software:</strong> Python (SciPy, matplotlib, Pandas, Scikit-learn, Seaborn, Torch, Torchvision), MATLAB, R Studio.</p>
+    <p><strong>Expertise:</strong> Data Analysis, Machine Learning, Mathematical Modeling, Data Visualization.</p>
 </div>
 
 </body>
